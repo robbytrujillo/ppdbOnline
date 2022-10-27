@@ -1,6 +1,6 @@
 <?php
 //input banner
-else if ($module == 'banner' AND $act == 'input') {
+if ($module == 'banner' AND $act == 'input') {
 	$lokasi_file = $_FILES['fupload']['tmp_name'];
 	$nama_file = $_FILES['fupload']['name'];
 	//Apabila ada gambar yang diupload

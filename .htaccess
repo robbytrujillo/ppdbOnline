@@ -1,0 +1,54 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+RewriteRule ^$ media.php?module=home [L]
+#RewriteRule ^index\.php$ media.php?module=home 
+RewriteRule ^google-search\.html$ media.php?module=cse&q=$1 [L]
+
+RewriteRule ^profil-kami\.html$ media.php?module=profilkami&id=$1 [L]
+RewriteRule ^halkomentar-(.*)-([0-9]+)\.html$ media.php?module=detailberita&judul=$1&halkomentar=$2 [L]
+RewriteRule ^hal-(.*)\.html$ media.php?module=halamanstatis&judul=$1 [L]
+RewriteRule ^berita-(.*)\.html$ media.php?module=detailberita&judul=$1 
+RewriteRule ^hasil-pencarian\.html$ media.php?module=hasilcari&q=$1 [L]
+RewriteRule ^semua-berita\.html$ media.php?module=semuaberita&id=$1 [L]
+RewriteRule ^semua-artikel\.html$ media.php?module=semuaartikel&id=$1 [L]
+RewriteRule ^semua-video\.html$ media.php?module=semuavideo&id=$1 [L]
+RewriteRule ^semua-karya\.html$ media.php?module=semuakarya&id=$1 [L]
+
+RewriteRule ^tag-(.*)\.html$ media.php?module=tag&id=$1
+RewriteRule ^bukutamu\.html$ media.php?module=bukutamu&id=$1 [L]
+RewriteRule ^halbukutamu-(.*)\.html$ media.php?module=bukutamu&halbukutamu=$1 [L]
+RewriteRule ^bukutamu-aksi\.html$ media.php?module=bukutamuaksi&id=$1 [L]
+RewriteRule ^form-pendaftaran\.html$ media.php?module=pendaftaran&id=$1 [L]
+RewriteRule ^aksi-pendaftaran\.html$ media.php?module=aksipendaftaran&id=$1 [L]
+RewriteRule ^galeri-photo\.html$ media.php?module=galeri&id=$1 [L]
+
+RewriteRule ^info-ppdb\.html$ media.php?module=infoppdb&id=$1 [L]
+RewriteRule ^daftar-blog\.html$ media.php?module=daftarblog&id=$1 [L]
+RewriteRule ^blog-siswa-(.*)\.html$ media.php?module=blogsiswa&id=$1 [L]
+RewriteRule ^hasil-seleksi\.html$ media.php?module=hasilseleksi&id=$1 [L]
+
+RewriteRule ^semua-agenda\.html$ media.php?module=semuaagenda&id=$1 [L]
+RewriteRule ^semua-pengumuman\.html$ media.php?module=semuapengumuman&id=$1 [L]
+
+RewriteRule ^hubungi-kami\.html$ media.php?module=hubungikami&id=$1 [L]
+RewriteRule ^hubungi-aksi\.html$ media.php?module=hubungiaksi&id=$1 [L]
+
+RewriteRule ^bukti-pendaftaran-(.*)\.html$ bukti_pendaftaran/bukti_pendaftaran.php?&id=$1 [L]
+RewriteRule ^laporan-pendaftaran\.html$ bukti_pendaftaran/laporan_pendaftaran.php?&id=$1 [L]
+RewriteRule ^pengumuman\.html$ bukti_pendaftaran/pengumuman.php?&id=$1 [L]
+RewriteRule ^google\.html$ media.php?module=google&id=$1 [L]
+
+RewriteRule ^archive\.html$ media.php?module=archive&id=$1 [L]
+RewriteRule ^login\.html$ media.php?module=login [L]
+RewriteRule ^daftar\.html$ media.php?module=daftar [L]
+RewriteRule ^cek-login\.html$ media.php?module=ceklogin [L]
+RewriteRule ^daftar-aksi\.html$ media.php?module=daftaraksi [L]
+RewriteRule ^logout\.html$ media.php?module=logout [L]
+
+RewriteRule ^not-found\.html$ media.php?module=notfound&id=$1 [L]
+
+
+
+#Options All -Indexes
+</IfModule>

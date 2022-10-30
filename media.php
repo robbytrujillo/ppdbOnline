@@ -1,21 +1,18 @@
-<?php
-if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip'))
+<?php 
+  if (substr_count($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip'))
 
-ob_start();
-session_start();
-// Panggil semua fungsi yang dibutuhkan (semuanya ada di folder config)
-	include "config/koneksi.php";
-	include "config/fungsi_indotgl.php";
-	include "config/class_paging.php";
-	include "config/fungsi_combobox.php";
+        ob_start();
+  session_start();
+  // Panggil semua fungsi yang dibutuhkan (semuanya ada di folder config)
+  	include "config/koneksi.php";//koneksi ke database
+	include "config/class_paging.php";//fungsi untuk membuat halaman
+	include "config/fungsi_combobox.php";//fungsi mengatu combo box
 	include "config/library.php";
-	include "config/fungsi_autolink.php";
-	include "config/fungsi_badword.php";
-	include "config/fungsi_kalender.php";
-
-	include "template.php";
-	
-  $ip      = $_SERVER['REMOTE_ADDR']; // Mendapatkan IP komputer user
+  	include "config/fungsi_autolink.php";//Membuat Auto LInk
+  	include "config/fungsi_badword.php";//Mananggkal Kata - kata kotor pada komentar
+  	include "config/fungsi_indotgl.php";//Membuat kalender
+ 	include "template.php"; 
+   $ip      = $_SERVER['REMOTE_ADDR']; // Mendapatkan IP komputer user
               $tanggal = date("Ymd"); // Mendapatkan tanggal sekarang
               $waktu   = time(); // 
 
